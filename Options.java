@@ -1,8 +1,6 @@
 /*********************************************************************
  FILE:    Options
  PROGRAMMER: Bryan Butz
- LOGON ID:   z1836033
- DUE DATE:   5/04/2020
 
  FUNCTION:   This class gives the user the option to change game settings
              such as the game difficulty, music/audio options, and other
