@@ -1,8 +1,6 @@
 /*********************************************************************
  FILE:    Ball
  PROGRAMMER: Bryan Butz
- LOGON ID:   z1836033
- DUE DATE:   5/04/2020
 
  FUNCTION:   This is the class to represent a ball object to be drawn
              on a canvas.
