@@ -1,8 +1,6 @@
 /*********************************************************************
  FILE:    Paddle
  PROGRAMMER: Bryan Butz
- LOGON ID:   z1836033
- DUE DATE:   5/04/2020
 
  FUNCTION:   This is the class used to represent a paddle to be drawn
              on a canvas. The paddle will be shown as a bitmap image
