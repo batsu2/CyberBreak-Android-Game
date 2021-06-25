@@ -1,8 +1,6 @@
 /*********************************************************************
  FILE:    AboutAppActivity
  PROGRAMMER: Bryan Butz
- LOGON ID:   z1836033
- DUE DATE:   5/04/2020
 
  FUNCTION:   This informs the user in the usage of the app as well as
              who programmed the app.
