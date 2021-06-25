@@ -1,8 +1,6 @@
 /*********************************************************************
  FILE:    BreakoutGame
  PROGRAMMER: Bryan Butz
- LOGON ID:   z1836033
- DUE DATE:   5/04/2020
 
  FUNCTION:   This class holds the main logic of the game. It creates and
              draws all objects on screen as well as setting up and
