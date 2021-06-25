@@ -1,8 +1,6 @@
 /*********************************************************************
  FILE:    Gameboard
  PROGRAMMER: Bryan Butz
- LOGON ID:   z1836033
- DUE DATE:   5/04/2020
 
  FUNCTION:   This is the class to represent the background of the game
              board, depicted as either a scrolling background of 12
