@@ -1,8 +1,6 @@
 /*********************************************************************
  FILE:    Brick
  PROGRAMMER: Bryan Butz
- LOGON ID:   z1836033
- DUE DATE:   5/04/2020
 
  FUNCTION:   This is the class to represent a brick object to be drawn
              on a canvas. The brick is shown as one of two different
