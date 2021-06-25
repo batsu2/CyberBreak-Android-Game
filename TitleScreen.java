@@ -1,8 +1,6 @@
 /*********************************************************************
  FILE:    TitleScreen
  PROGRAMMER: Bryan Butz
- LOGON ID:   z1836033
- DUE DATE:   5/04/2020
 
  FUNCTION:   This is the main entry point of the entire app. It stores
              global variables (variables changed in the options menu and
