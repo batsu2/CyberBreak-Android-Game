@@ -20,7 +20,7 @@ public class Brick
     RectF rect;
     private Bitmap bitmap1, bitmap2;
 
-    // How long and high our paddle will be
+    // How long and high the paddle will be
     private float length;
     private float height;
 
