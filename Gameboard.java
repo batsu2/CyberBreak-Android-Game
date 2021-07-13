@@ -18,7 +18,7 @@ public class Gameboard extends BreakoutGame
 {
     private RectF rect;
 
-    // How long and high our paddle will be
+    // How long and high the paddle will be
     private float length;
     private float height;
 
@@ -28,7 +28,7 @@ public class Gameboard extends BreakoutGame
             bitmap8, bitmap9, bitmap10, bitmap11,
             bitmap12, bitmapDef;
 
-    // X is the far left of the rectangle which forms our paddle
+    // X is the far left of the rectangle which forms the paddle
     private float x;
 
     // Y is the top coordinate
