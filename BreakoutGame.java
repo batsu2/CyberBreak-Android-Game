@@ -166,8 +166,7 @@ public class BreakoutGame extends TitleScreen
         {
             // Asks the SurfaceView class to set up our object.
             super(context);
-
-            // Make a globally available copy of the context so we can use it in another method
+            
             this.context = context;
 
             // Initialize ourHolder and paint objects
