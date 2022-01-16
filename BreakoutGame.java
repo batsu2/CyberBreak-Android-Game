@@ -93,7 +93,7 @@ public class BreakoutGame extends TitleScreen
         //The game thread
         Thread gameThread = null;
 
-        SurfaceHolder ourHolder;
+        SurfaceHolder gameHolder;
 
         // tell whether the game is running or not
         volatile boolean playing;
@@ -169,8 +169,8 @@ public class BreakoutGame extends TitleScreen
             
             this.context = context;
 
-            // Initialize ourHolder and paint objects
-            ourHolder = getHolder();
+            // Initialize gameHolder and paint objects
+            gameHolder = getHolder();
             paint = new Paint();
 
             // Get a Display object to access screen details
@@ -189,7 +189,7 @@ public class BreakoutGame extends TitleScreen
 
             animationCounter = 1;
 
-            // Create a ball
+            // Create ball
             ball = new Ball( screenX, screenY);
 
             // Prepare the players bullet
@@ -201,7 +201,6 @@ public class BreakoutGame extends TitleScreen
 
 
             // Load the sounds
-
             soundPool = new SoundPool(10, AudioManager.STREAM_MUSIC,0);
 
 
@@ -377,7 +376,7 @@ public class BreakoutGame extends TitleScreen
 
 
         // Movement, collision detection, incrementing/decrementing
-        // happens in here.
+        // happens in this method
         public void update()
         {
 
@@ -405,8 +404,10 @@ public class BreakoutGame extends TitleScreen
                             soundPool.play(oneUpID, 1, 1, 0, 0, 1);
                         }
                         else
+                        {
                             soundPool.play(explodeID, 1, 1, 0, 0, 1);
-                    }
+                        }
+                   }
                 }
             }
 
@@ -414,7 +415,7 @@ public class BreakoutGame extends TitleScreen
 
 
             // If player's bullet hit a brick
-            if(bullet.getStatus())
+            if( bullet.getStatus() )
             {
                 for (int i = 0; i < numBricks; i++)
                 {
@@ -556,10 +557,10 @@ public class BreakoutGame extends TitleScreen
         {
 
             // Checking if holder is valid before continuing
-            if (ourHolder.getSurface().isValid())
+            if (gameHolder.getSurface().isValid())
             {
                 // Lock the canvas to draw
-                canvas = ourHolder.lockCanvas();
+                canvas = gameHolder.lockCanvas();
 
                 // Draw background
                 canvas.drawColor(Color.argb(255,  0, 0, 0));
@@ -669,7 +670,7 @@ public class BreakoutGame extends TitleScreen
 
 
                 // Draw the players bullet if active
-                if(bullet.getStatus())
+                if( bullet.getStatus() )
                 {
                     canvas.drawRect(bullet.getRect(), paint);
                 }
@@ -677,10 +678,10 @@ public class BreakoutGame extends TitleScreen
 
 
                 // Draw everything to the screen
-                ourHolder.unlockCanvasAndPost(canvas);
+                gameHolder.unlockCanvasAndPost(canvas);
             }
 
-        }
+        }//end draw
 
 
 
@@ -723,7 +724,6 @@ public class BreakoutGame extends TitleScreen
 
             switch (motionEvent.getAction() & MotionEvent.ACTION_MASK)
             {
-
                 // Player has touched the screen
                 case MotionEvent.ACTION_DOWN:
 
@@ -743,7 +743,8 @@ public class BreakoutGame extends TitleScreen
                     if(motionEvent.getY() < screenY - screenY / 8)
                     {
                         // Shots fired
-                        if(bullet.shoot(paddle.getX()+ paddle.getLength()/2,screenY,bullet.UP)){
+                        if(bullet.shoot(paddle.getX()+ paddle.getLength()/2,screenY,bullet.UP))
+                        {
                             soundPool.play(wallBounceID, 1, 1, 0, 0, 1);
                         }
                     }
